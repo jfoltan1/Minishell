@@ -33,6 +33,7 @@ make
 - ✅ Variable expansion (`$VAR`, `$?`)
 - ✅ Clean signal handling
 - ✅ Uses readline for input/history
+- ✅ Memory leak-free.
 
 ---
 
@@ -52,7 +53,6 @@ make
 - [ ] Quote parsing edge cases
 - [ ] Custom history saving/loading
 - [ ] Job control and background processes
-- [ ] Improved signal edge handling
 
 ---
 
@@ -62,41 +62,5 @@ make
 - Limited to what the subject describes (no `;`, `\`, etc.)
 - Readline leaks aren't fixed (allowed)
 - Behavior based on bash, but not 100% bash
-
----
-
-## ✅ Bonus Goals (Only if mandatory is perfect)
-
-- `&&` and `||` logic operations
-- Wildcards `*` matching current dir contents
-- Grouping with parentheses
-
----
-
-## 🧪 Testing Tips
-
-- Use bash to compare behavior
-- Use `valgrind` to ensure your own code is leak-free:
-```bash
-valgrind ./minishell
-```
-
----
-
-## 🗂️ Project Structure
-
-```
-├── src/
-├── includes/
-├── libft/
-├── Makefile
-└── README.md
-```
-
----
-
-## 💬 Final Note
-
-This project gives real insight into how shells work under the hood. It touches processes, file descriptors, signal handling, and terminal interaction. Building your own `bash` is one of the best ways to level up your C and system programming skills.
 
 ---
